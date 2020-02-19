@@ -4,12 +4,14 @@ import time
 import csv
 from datetime import datetime
 
+# This code takes a hard drive and puts information about the folders it contains into a csv
+
 # Hard drive directory
 start_path = Path(r'D:')
 #start_path = Path(r'C:\Users\specialcollections\Desktop\Working_folder_specasst\HD')
 
 # Open the CSV file where we will save the data
-with open('test.csv','a', encoding='utf-8', newline = '') as f:
+with open('folder_info.csv','a', encoding='utf-8', newline = '') as f:
     # Create a writer object from csv module
     writer = csv.DictWriter(f, fieldnames=["File Path", "Name", "Last Modified", "Created"])
     # Write the header of the CSV file
